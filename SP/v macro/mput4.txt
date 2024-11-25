@@ -1,0 +1,26 @@
+MACRO
+ADD_OP &ARG1, &ARG2
+AIF &ARG3 EQ 4 LABEL1       
+MOVER AREG, &ARG1           
+ADD AREG, &ARG2             
+AGO ENDLABEL                
+LABEL1
+MOVER AREG, 0               
+ENDLABEL
+MEND
+
+MACRO
+SUB_OP &ARG1, &ARG2
+AIF &ARG3 EQ 4 LABEL1       
+MOVER AREG, &ARG1           
+SUB AREG, &ARG2             
+AGO ENDLABEL                
+LABEL1
+MOVER AREG, 0               
+ENDLABEL
+MEND
+
+START 100
+ADD_OP 5, 10, 0             
+SUB_OP 15, 5, 0             
+END

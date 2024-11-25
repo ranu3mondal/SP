@@ -1,0 +1,2 @@
+DTWO	0
+MULTIPLY	8
